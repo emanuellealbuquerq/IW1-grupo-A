@@ -28,3 +28,20 @@ function logar() {
 
     }
 }
+
+function cadastro() {
+    const ds = JSON.parse(localStorage.getItem("banco"))
+
+    let lg = document.querySelector("#login").value
+    let sn = document.querySelector("#senha").value
+
+    //alert(lg + "\n" + sn)
+
+    for(let i = 0; i < ds.length; i++) {
+
+        if(lg == ds[i].login && sn == ds[i].senha){
+          alert("Logado!!! aí simm")
+        }
+
+    }
+}
